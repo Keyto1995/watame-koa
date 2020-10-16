@@ -28,6 +28,10 @@ db.forEach((data) => {
       router.post(test_data.url || data.url, (ctx) => {
         ctx.body = test_data.response;
       });
+    } else if (data.method === "PUT") {
+      router.put(test_data.url || data.url, (ctx) => {
+        ctx.body = test_data.response;
+      });
     }
   });
 });

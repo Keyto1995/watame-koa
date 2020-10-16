@@ -93,4 +93,25 @@ module.exports = [
       },
     ],
   },
+  {
+    name: "修改商品",
+    method: "PUT",
+    url: "/goods/:id",
+    body: {
+      name: { name: "商品名称", type: "string", required: true, desc: "" },
+      price: { name: "商品价格", type: "string", required: true, desc: "" },
+    },
+    response: {
+      id: { name: "商品ID", type: "num", desc: "" },
+      name: { name: "商品名称", type: "string", desc: "" },
+      price: { name: "商品价格", type: "string", desc: "" },
+    },
+    test_data: [
+      {
+        url: "/goods/1",
+        body: { name: "西瓜子", price: "3.0" },
+        response: { id: 1, name: "西瓜子", price: "3.0" },
+      },
+    ],
+  },
 ];
