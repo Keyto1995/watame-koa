@@ -1,0 +1,19 @@
+{
+  "name": "watame-koa",
+  "version": "0.0.0",
+  "description": "基于koa2实现的watame服务器",
+  "main": "src/index.js",
+  "dependencies": {
+    "koa": "^2.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "keywords": [
+    "watame",
+    "koa2"
+  ],
+  "author": "Keyto",
+  "license": "MIT"
+}
