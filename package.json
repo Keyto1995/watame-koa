@@ -4,11 +4,12 @@
   "description": "基于koa2实现的watame服务器",
   "main": "src/index.js",
   "dependencies": {
+    "@koa/router": "^9.4.0",
     "koa": "^2.13.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node src/index.js"
+    "test": "node src/server.js"
   },
   "keywords": [
     "watame",
