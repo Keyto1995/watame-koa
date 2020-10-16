@@ -32,6 +32,10 @@ db.forEach((data) => {
       router.put(test_data.url || data.url, (ctx) => {
         ctx.body = test_data.response;
       });
+    } else if (data.method === "DELETE") {
+      router.del(test_data.url || data.url, (ctx) => {
+        ctx.body = test_data.response;
+      });
     }
   });
 });

@@ -114,4 +114,20 @@ module.exports = [
       },
     ],
   },
+  {
+    name: "删除商品",
+    method: "DELETE",
+    url: "/goods/:id",
+    response: {
+      id: { name: "商品ID", type: "num", desc: "" },
+      name: { name: "商品名称", type: "string", desc: "" },
+      price: { name: "商品价格", type: "string", desc: "" },
+    },
+    test_data: [
+      {
+        url: "/goods/1",
+        response: { id: 1, name: "西瓜", price: "1.2" },
+      },
+    ],
+  },
 ];
