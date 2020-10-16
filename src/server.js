@@ -8,10 +8,15 @@ router.get("/ping", async (ctx) => {
   ctx.body = "Pong:" + count++;
 });
 
-const data = require("./data");
-router.get(data.url, (ctx) => {
-  ctx.body = data.response;
+const db = require("./db");
+db.forEach((data) => {
+  data.test_data.forEach((test_data) => {
+    router.get(test_data.url || data.url, (ctx) => {
+      ctx.body = test_data.response;
+    });
+  });
 });
+
 app.use(router.routes()); /*启动路由*/
 app.use(router.allowedMethods());
 
